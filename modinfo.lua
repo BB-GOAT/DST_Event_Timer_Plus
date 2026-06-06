@@ -35,7 +35,7 @@ Island Adventures - Shipwrecked : Sealnado, Tiger Shark, Volcano, Floaty Boaty K
 Above the Clouds : Vampire Bat, Fountain of Youth, Masked Pig, BFB, Aporkalypse, and bats/Ancient Herald during the Aporkalypse
 ]])
 author = "冰冰羊"
-version = "2025-08-10"
+version = "2025-08-31"
 dst_compatible = true
 forge_compatible = false
 gorge_compatible = false

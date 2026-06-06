@@ -13,29 +13,29 @@ local SaveTimeData = _G.SaveTimeData
 
 
 -- [[岛屿冒险 - 海难]]
-_G.EVENTS.twister                       = { name = STRINGS.NAMES.TWISTER , anim = "idle_loop", build = "twister_build", bank = "twister", scale = 0.02, offest = -10}
-_G.EVENTS.chessnavy                     = { name = STRINGS.NAMES.KNIGHTBOAT, anim = "idle_loop", build = "knightboat_build", bank = "knightboat", scale = 0.09, offest = -10 } -- 浮船骑士
-_G.EVENTS.krakener                      = { name = STRINGS.NAMES.KRAKEN, anim = "idle_loop", build = "quacken", bank = "quacken", scale = 0.03, offest = -10 } -- 海妖
-_G.EVENTS.tigersharker                  = { name = STRINGS.NAMES.TIGERSHARK, anim = "taunt", build = "tigershark_ground_build", bank = "tigershark", scale = 0.02, offest = -10 } -- 虎鲨
-_G.EVENTS.volcanomanager                = { name = STRINGS.UI.CUSTOMIZATIONSCREEN.DRAGOONEGG, anim = "active_idle_pst", build = "volcano", bank = "volcano", scale = 0.0077, offest = -15 } -- 火山爆发
-_G.EVENTS.klaussack_tropical_spawntimer = { name = STRINGS.NAMES.KLAUS_SACK_TROPICAL, anim = "idle", build = "klaus_bag_tropical", bank = "klaus_bag", scale = 0.08, offest = -16 } -- 热带赃物袋
+_G.EVENTS.twister                       = { name = STRINGS.NAMES.TWISTER , anim = "idle_loop", build = "twister_build", bank = "twister", scale = 0.02, offset = -10}
+_G.EVENTS.chessnavy                     = { name = STRINGS.NAMES.KNIGHTBOAT, anim = "idle_loop", build = "knightboat_build", bank = "knightboat", scale = 0.09, offset = -10 } -- 浮船骑士
+_G.EVENTS.krakener                      = { name = STRINGS.NAMES.KRAKEN, anim = "idle_loop", build = "quacken", bank = "quacken", scale = 0.03, offset = -10 } -- 海妖
+_G.EVENTS.tigersharker                  = { name = STRINGS.NAMES.TIGERSHARK, anim = "taunt", build = "tigershark_ground_build", bank = "tigershark", scale = 0.02, offset = -10 } -- 虎鲨
+_G.EVENTS.volcanomanager                = { name = STRINGS.UI.CUSTOMIZATIONSCREEN.DRAGOONEGG, anim = "active_idle_pst", build = "volcano", bank = "volcano", scale = 0.0077, offset = -15 } -- 火山爆发
+_G.EVENTS.klaussack_tropical_spawntimer = { name = STRINGS.NAMES.KLAUS_SACK_TROPICAL, anim = "idle", build = "klaus_bag_tropical", bank = "klaus_bag", scale = 0.08, offset = -16 } -- 热带赃物袋
 
 -- [[云霄国度-Above The Clouds]]
 _G.EVENTS.aporkalypse                   = { name = STRINGS.UI.SERVERLISTINGSCREEN.SEASONS.APORKALYPSE, tex = "Aporkalypse_Clock.tex", xml = "images/Aporkalypse_Clock.xml", size = 40 } -- 大灾变
-_G.EVENTS.pig_bandit_respawn_time_      = { name = STRINGS.NAMES.PIGBANDIT, anim = "idle_loop", build = "pig_bandit", bank = "townspig", scale = 0.07, offest = -15 } -- 蒙面猪人
-_G.EVENTS.batted                        = { name = STRINGS.UI.CUSTOMIZATIONSCREEN.VAMPIREBAT, anim = "fly_loop", build = "bat_vamp_build", bank = "bat_vamp", scale = 0.09, offest = -27 } -- 吸血蝙蝠袭击
-_G.EVENTS.ROC_RESPAWN_TIMER             = { name = STRINGS.NAMES.ROC_HEAD, anim = "idle_loop", build = "roc_head_build", bank = "head", scale = 0.01, offest = -20 } -- 友善的大鹏
-_G.EVENTS.GRUB_RESPAWN_TIME             = { name = STRINGS.UI.CUSTOMIZATIONSCREEN.GIANTGRUB_SETTING, anim = "idle", build = "giant_grub", bank = "giant_grub", scale = 0.15, offest = -7 } -- 巨型蛆虫
-_G.EVENTS.ancient_herald                = { name = STRINGS.NAMES.ANCIENT_HERALD, anim = "idle", build = "ancient_spirit", bank = "ancient_spirit", scale = 0.05, offest = -10 } -- 远古先驱
-_G.EVENTS.pugalisk_fountain             = { name = STRINGS.NAMES.PUGALISK_FOUNTAIN, anim = "flow_loop", build = "python_fountain", bank = "fountain", scale = 0.02, offest = -10}
+_G.EVENTS.pig_bandit_respawn_time_      = { name = STRINGS.NAMES.PIGBANDIT, anim = "idle_loop", build = "pig_bandit", bank = "townspig", scale = 0.07, offset = -15 } -- 蒙面猪人
+_G.EVENTS.batted                        = { name = STRINGS.UI.CUSTOMIZATIONSCREEN.VAMPIREBAT, anim = "fly_loop", build = "bat_vamp_build", bank = "bat_vamp", scale = 0.09, offset = -27 } -- 吸血蝙蝠袭击
+_G.EVENTS.ROC_RESPAWN_TIMER             = { name = STRINGS.NAMES.ROC_HEAD, anim = "idle_loop", build = "roc_head_build", bank = "head", scale = 0.01, offset = -20 } -- 友善的大鹏
+_G.EVENTS.GRUB_RESPAWN_TIME             = { name = STRINGS.UI.CUSTOMIZATIONSCREEN.GIANTGRUB_SETTING, anim = "idle", build = "giant_grub", bank = "giant_grub", scale = 0.15, offset = -7 } -- 巨型蛆虫
+_G.EVENTS.ancient_herald                = { name = STRINGS.NAMES.ANCIENT_HERALD, anim = "idle", build = "ancient_spirit", bank = "ancient_spirit", scale = 0.05, offset = -10 } -- 远古先驱
+_G.EVENTS.pugalisk_fountain             = { name = STRINGS.NAMES.PUGALISK_FOUNTAIN, anim = "flow_loop", build = "python_fountain", bank = "fountain", scale = 0.02, offset = -10}
 
 AddPrefabPostInit("world", function(inst)
     if TheWorld:HasTag("island") then
         -- 猎犬替换为鳄狗
-        _G.EVENTS.hound = { name = STRINGS.NAMES.CROCODOG , anim = "run_loop", build = "crocodog", bank = "crocodog", scale = 0.08, offest = -14 }
+        _G.EVENTS.hound = { name = STRINGS.NAMES.CROCODOG , anim = "run_loop", build = "crocodog", bank = "crocodog", scale = 0.08, offset = -14 }
     elseif TheWorld:HasTag("volcano") then
         -- 猎犬替换为鳄狗(虽然火山没有猎犬袭击)
-        _G.EVENTS.hound = { name = STRINGS.NAMES.CROCODOG , anim = "run_loop", build = "crocodog", bank = "crocodog", scale = 0.08, offest = -14 }
+        _G.EVENTS.hound = { name = STRINGS.NAMES.CROCODOG , anim = "run_loop", build = "crocodog", bank = "crocodog", scale = 0.08, offset = -14 }
     end
 end)
 
